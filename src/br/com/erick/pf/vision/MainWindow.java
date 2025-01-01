@@ -94,7 +94,7 @@ public class MainWindow extends JFrame {
 				List<Field> list = controller.getShortestPath();
 				for (int i = 0; i < list.size(); i++) {
 					if (list.get(i).getObj() == null) {
-						list.get(i).getButton().setBackground(Color.green);
+						list.get(i).getButton().setBackground(Color.cyan);
 						try {
 							Thread.sleep(10);
 						} catch (InterruptedException e1) {

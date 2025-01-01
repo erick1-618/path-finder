@@ -1,5 +1,6 @@
 package br.com.erick.pf.simulation;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -41,8 +42,14 @@ public class Controller {
 	        
 	        if (current.isExplored()) continue;
 	        current.setExplored(true);
+			if (current.getObj() == null)
+	        current.getButton().setBackground(Color.lightGray);
 	        
-	        if (current == target) {
+	        try {
+				Thread.sleep(2);
+			} catch (Exception e) {}
+	        
+			if (current == target) {
 	        	targetFound = true;
 	        	break;	        	
 	        }
