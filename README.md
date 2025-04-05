@@ -4,7 +4,7 @@ Programa desenvolvido em Java, que implementa o algoritmo de Dijsktra e o simula
 
 ## Como utilizar
 
-Após a instalação e execução do arquivo .jar, um JFrame contendo a matrix da simulação será aberto.
+Após a instalação e execução do arquivo .jar, um JFrame contendo a matriz da simulação será aberto.
 
 ### 1. Com o botão esquerdo do mouse, selecione o ponto inicial e o final.
 
@@ -28,3 +28,19 @@ Para começar do início aperte o botão reset
 ## Requisitos
 
 ### JRE 21
+
+## Recompilando o projeto
+
+Caso a sua versão do JRE seja diferente, o projeto deverá ser recompilado manualmente. Para tanto, faça:
+
+```
+cd src
+javac $(find . -name "*.java")
+```
+
+Agora, para executar o simulador:
+
+```
+cd src //certifique-se de estar na pasta src
+java br.com.erick.pf.vision.MainWindow
+```

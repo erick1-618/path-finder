@@ -3,6 +3,7 @@ package br.com.erick.pf.simulation;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 import br.com.erick.pf.exceptions.PathNotFoundException;
@@ -81,7 +82,9 @@ public class Controller {
 			list.add(current);
 			current = current.getPreviousFastest();
 		}
-		return list.reversed();
+		List<Field> reversed = new ArrayList<Field>(list);
+		Collections.reverse(reversed);
+		return reversed;
 	}
 	
 	public void logicalReset() {
